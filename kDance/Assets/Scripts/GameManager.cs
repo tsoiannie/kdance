@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public AudioSource music;
+    public float musicStartTime;
 
     public bool startPlaying;
 
@@ -33,22 +34,80 @@ public class GameManager : MonoBehaviour
     public GameObject perfect;
     public GameObject hit;
     public GameObject miss;
+
+
+    public float normalHits;
+    public float greatHits;
+    public float perfectHits;
+    public float missedHits;
+
+    public Text normalsText, greatsText, perfectsText, missesText, rankText, finalscoreText;
+
+    public GameObject resultsScreen;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.fixedTime > 1f && counter == 0)
+        if (Time.fixedTime > musicStartTime && counter == 0)
         {
-            Debug.Log("HERE TIME AFTER ONE SECOND");
+
             music.Play();
             counter++;
+        }
+
+        if(Time.fixedTime > music.time + 5 && !resultsScreen.activeInHierarchy)
+        {
+            resultsScreen.SetActive(true);
+
+            normalsText.text = "" + normalHits;
+            greatsText.text = "" + greatHits;
+            perfectsText.text = "" + perfectHits;
+            missesText.text = "" + missedHits;
+
+            string rankVal = "F";
+
+            if (currentScore >= 1000)
+            {
+                rankVal = "D";
+                rankText.color = Color.gray;
+                    if (currentScore >= 2000)
+                {
+                    rankVal = "C";
+                    rankText.color = Color.yellow;
+                    if (currentScore >= 3000)
+                    {
+                        rankVal = "B";
+                        rankText.color = Color.blue;
+                        if(currentScore >= 4000)
+                        {
+                            rankVal = "A";
+                            rankText.color = Color.red;
+                            if(currentScore >= 5000)
+                            {
+                                rankVal = "S";
+                                rankText.color = Color.magenta;
+                                if(currentScore >= 6000)
+                                {
+                                    rankVal = "SS";
+                                    rankText.color = Color.cyan;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            rankText.text = rankVal;
+            finalscoreText.text = currentScore.ToString();
         }
     }
 
@@ -79,16 +138,25 @@ public class GameManager : MonoBehaviour
         currentScore += scorePerNote * currentMultiplier;
         scoreText.text = "Score: " + currentScore;
 
-        Instantiate(hit, new Vector2(3, 8), Quaternion.identity);
+
 
     }
 
+    public void NormalHit()
+    {
+        currentScore += scorePerNote * currentMultiplier;
+        NoteHit();
+        Instantiate(hit, new Vector2(3, 8), Quaternion.identity);
+        normalHits++;
+
+    }
 
     public void GoodHit()
     {
         currentScore += scorePerGoodNote * currentMultiplier;
         NoteHit();
         Instantiate(great, new Vector2(3, 5), Quaternion.identity);
+        greatHits++;
     }
 
     public void PerfectHit()
@@ -96,6 +164,7 @@ public class GameManager : MonoBehaviour
         currentScore += scorePerPerfectNote * currentMultiplier;
         NoteHit();
         Instantiate(perfect, new Vector2(3, 2), Quaternion.identity);
+        perfectHits++;
     }
 
     public void NoteMissed()
@@ -103,5 +172,6 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTracker = 0;
         Instantiate(miss, new Vector2(3, -1), Quaternion.identity);
+        missedHits++;
     }
 }

@@ -46,7 +46,7 @@ public class ArrowEnter : MonoBehaviour
                 else
                 {
                     Debug.Log("Hit");
-                    GameManager.instance.NoteHit();
+                    GameManager.instance.NormalHit();
                 }
             }
         }
