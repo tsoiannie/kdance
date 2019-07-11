@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Sprites;
 
 namespace FancyScrollView
 {
@@ -38,7 +40,7 @@ namespace FancyScrollView
         /// Updates the content.
         /// </summary>
         /// <param name="itemData">Item data.</param>
-        public abstract void UpdateContent(TItemData itemData);
+        public abstract void UpdateContent(TItemData itemData, Sprite image);
 
         /// <summary>
         /// Updates the position.

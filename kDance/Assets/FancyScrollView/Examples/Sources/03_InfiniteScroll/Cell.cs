@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Sprites;
 
 namespace FancyScrollView.Example03
 {
@@ -12,6 +13,7 @@ namespace FancyScrollView.Example03
         [SerializeField] Image imageLarge = default;
         [SerializeField] Button button = default;
 
+
         static class AnimatorHash
         {
             public static readonly int Scroll = Animator.StringToHash("scroll");
@@ -19,18 +21,27 @@ namespace FancyScrollView.Example03
 
         void Start()
         {
+            imageLarge = GetComponent<Image>();
             button.onClick.AddListener(() => Context.OnCellClicked?.Invoke(Index));
+
+
         }
 
-        public override void UpdateContent(ItemData itemData)
+        public override void UpdateContent(ItemData itemData, Sprite image)
         {
             message.text = itemData.Message;
-            messageLarge.text = Index.ToString();
+
+            //Debug.Log(imageLarge.sprite);
+            imageLarge.sprite = image;
+            //Debug.Log(image);
+
+            //messageLarge.text = Index.ToString();
+
 
             var selected = Context.SelectedIndex == Index;
-            imageLarge.color = image.color = selected
-                ? new Color32(0, 255, 255, 100)
-                : new Color32(255, 255, 255, 77);
+            //imageLarge.color = selected
+                //? new Color32(180, 80, 100, 190)
+                //: new Color32(255, 255, 255, 30);
         }
 
         public override void UpdatePosition(float position)

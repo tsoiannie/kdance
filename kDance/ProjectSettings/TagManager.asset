@@ -10,6 +10,7 @@ TagManager:
   - Green
   - Blue
   - miss
+  - buttons
   layers:
   - Default
   - TransparentFX

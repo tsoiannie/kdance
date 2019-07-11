@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Sprites;
 
 namespace FancyScrollView
 {
@@ -18,15 +20,19 @@ namespace FancyScrollView
 
         protected abstract GameObject CellPrefab { get; }
         protected IList<TItemData> ItemsSource { get; set; } = new List<TItemData>();
+        protected Sprite[] Images { get; set; } = new Sprite[6];
+
         protected TContext Context { get; } = new TContext();
 
         /// <summary>
         /// Updates the contents.
         /// </summary>
         /// <param name="itemsSource">Items source.</param>
-        protected void UpdateContents(IList<TItemData> itemsSource)
+        protected void UpdateContents(IList<TItemData> itemsSource, Sprite[] images)
         {
             ItemsSource = itemsSource;
+            //ADDED
+            Images = images;
             Refresh();
         }
 
@@ -109,7 +115,8 @@ namespace FancyScrollView
                 {
                     cell.Index = index;
                     cell.SetVisible(true);
-                    cell.UpdateContent(ItemsSource[index]);
+      
+                    cell.UpdateContent(ItemsSource[index], Images[index]);
                 }
 
                 cell.UpdatePosition(position);

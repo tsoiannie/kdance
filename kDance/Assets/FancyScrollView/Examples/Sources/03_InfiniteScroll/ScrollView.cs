@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using EasingCore;
+using UnityEngine.UI;
+using UnityEngine.Sprites;
 
 namespace FancyScrollView.Example03
 {
@@ -33,9 +35,9 @@ namespace FancyScrollView.Example03
             Refresh();
         }
 
-        public void UpdateData(IList<ItemData> items)
+        public void UpdateData(IList<ItemData> items, Sprite[] images)
         {
-            UpdateContents(items);
+            UpdateContents(items, images);
             scroller.SetTotalCount(items.Count);
         }
 
