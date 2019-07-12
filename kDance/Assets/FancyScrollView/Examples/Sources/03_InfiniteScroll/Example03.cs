@@ -12,15 +12,20 @@ namespace FancyScrollView.Example03
         private ItemData[] items = new ItemData[6];
         private Sprite[] images = new Sprite[6];
 
-        public string group1;
+        public string text1;
+        public string text2;
+        public string text3;
+        public string text4;
+        public string text5;
+        public string text6;
 
         //pictures
-        public Sprite bts;
-        public Sprite blackpink;
-        public Sprite monstaX;
-        public Sprite izone;
-        public Sprite loona;
-        public Sprite gIdle;
+        public Sprite image1;
+        public Sprite image2;
+        public Sprite image3;
+        public Sprite image4;
+        public Sprite image5;
+        public Sprite image6;
         
 
         void Start()
@@ -29,19 +34,19 @@ namespace FancyScrollView.Example03
                 .Select(i => new ItemData($"Song {i}"))
                 .ToArray();*/
 
-             items[0] = new ItemData(group1);
-             items[1] = new ItemData($"BLACKPINK");
-             items[2] = new ItemData($"MONSTA X");
-             items[3] = new ItemData($"LOONA");
-             items[4] = new ItemData($"IZ*ONE");
-            items[5] = new ItemData($"(G)I-dle");
+             items[0] = new ItemData(text1);
+             items[1] = new ItemData(text2);
+             items[2] = new ItemData(text3);
+             items[3] = new ItemData(text4);
+             items[4] = new ItemData(text5);
+            items[5] = new ItemData(text6);
 
-            images[0] = bts;
-            images[1] = blackpink;
-            images[2] = monstaX;
-            images[3] = loona;
-            images[4] = izone;
-            images[5] = gIdle;
+            images[0] = image1;
+            images[1] = image2;
+            images[2] = image3;
+            images[3] = image4;
+            images[4] = image5;
+            images[5] = image6;
 
 
 

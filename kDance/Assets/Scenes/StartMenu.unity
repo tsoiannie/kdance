@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4386625243646400, guid: 4ca1679f59738414ba176b2992042c80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.2
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4386625243646400, guid: 4ca1679f59738414ba176b2992042c80, type: 3}
       propertyPath: m_LocalPosition.z
@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 114699901572180746, guid: 4ca1679f59738414ba176b2992042c80,
         type: 3}
       propertyPath: barYScale
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114699901572180746, guid: 4ca1679f59738414ba176b2992042c80,
         type: 3}
@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357215086556076, guid: 3dbec1e87667bc8488d123ebdd3d045c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4357215086556076, guid: 3dbec1e87667bc8488d123ebdd3d045c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -482,7 +482,12 @@ PrefabInstance:
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: barYScale
-      value: 25
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
+        type: 3}
+      propertyPath: barXSpacing
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dbec1e87667bc8488d123ebdd3d045c, type: 3}
@@ -560,6 +565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
         type: 3}
+      propertyPath: textNames.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
       propertyPath: images.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: ff612647480b741128d97d547aedc7c5,
@@ -580,13 +590,13 @@ PrefabInstance:
         type: 3}
       propertyPath: images.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 400a6803795414a6d9901b4505ee8abe,
+      objectReference: {fileID: 21300000, guid: 39cc32c94983549bdbb72d0ec072ece0,
         type: 3}
     - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
         type: 3}
       propertyPath: images.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 39cc32c94983549bdbb72d0ec072ece0,
+      objectReference: {fileID: 21300000, guid: 400a6803795414a6d9901b4505ee8abe,
         type: 3}
     - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
         type: 3}
@@ -640,6 +650,102 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6bdb4aed90c3d4ea9a41993d6e052d93,
         type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text1
+      value: BTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text2
+      value: BLACKPINK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text3
+      value: MONSTA-X
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text4
+      value: IZ*ONE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text5
+      value: LOONA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: text6
+      value: (G)I-DLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image1
+      value: 
+      objectReference: {fileID: 21300000, guid: ff612647480b741128d97d547aedc7c5,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e20e5fa9af304e438a39ab1e7ca336f,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image6
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bdb4aed90c3d4ea9a41993d6e052d93,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image4
+      value: 
+      objectReference: {fileID: 21300000, guid: 39cc32c94983549bdbb72d0ec072ece0,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image3
+      value: 
+      objectReference: {fileID: 21300000, guid: c4224892cd83f4cfca78f2d126e270ea,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: image5
+      value: 
+      objectReference: {fileID: 21300000, guid: 400a6803795414a6d9901b4505ee8abe,
+        type: 3}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[0]
+      value: BTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[1]
+      value: BLACKPINK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[2]
+      value: MONSTA X
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[3]
+      value: IZ*ONE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[4]
+      value: LOONA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830990199760464643, guid: 5bf43b87316dc4f38b03fcc8e981a666,
+        type: 3}
+      propertyPath: textNames.Array.data[5]
+      value: (G)I-DLE
+      objectReference: {fileID: 0}
     - target: {fileID: 2107576089745836919, guid: 5bf43b87316dc4f38b03fcc8e981a666,
         type: 3}
       propertyPath: cellPrefab

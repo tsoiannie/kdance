@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Sprites;
+using System.Collections;
 
 namespace FancyScrollView.Example03
 {
@@ -8,10 +9,11 @@ namespace FancyScrollView.Example03
     {
         [SerializeField] Animator animator = default;
         [SerializeField] Text message = default;
-        [SerializeField] Text messageLarge = default;
-        [SerializeField] Image image = default;
+        //[SerializeField] Text messageLarge = default;
+        //[SerializeField] Image image = default;
         [SerializeField] Image imageLarge = default;
         [SerializeField] Button button = default;
+        //public Image child;
 
 
         static class AnimatorHash
@@ -21,6 +23,7 @@ namespace FancyScrollView.Example03
 
         void Start()
         {
+            //child = this.gameObject.GetComponentInChildren(Image);
             imageLarge = GetComponent<Image>();
             button.onClick.AddListener(() => Context.OnCellClicked?.Invoke(Index));
 
@@ -30,10 +33,7 @@ namespace FancyScrollView.Example03
         public override void UpdateContent(ItemData itemData, Sprite image)
         {
             message.text = itemData.Message;
-
-            //Debug.Log(imageLarge.sprite);
             imageLarge.sprite = image;
-            //Debug.Log(image);
 
             //messageLarge.text = Index.ToString();
 

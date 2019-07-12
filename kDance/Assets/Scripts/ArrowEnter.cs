@@ -57,7 +57,7 @@ public class ArrowEnter : MonoBehaviour
         if (collision.tag == "Activator")
         {
             canBePressed = true;
-            Debug.Log("ACTIVATOR IS TURNING TRUE");
+           
         }
 
         if (collision.tag == "miss")
