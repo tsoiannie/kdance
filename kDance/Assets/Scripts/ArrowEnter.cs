@@ -18,6 +18,7 @@ public class ArrowEnter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(keyPress))
         {
             if (canBePressed)
@@ -51,6 +52,7 @@ public class ArrowEnter : MonoBehaviour
             }
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

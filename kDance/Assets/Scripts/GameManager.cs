@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource music;
     public float musicStartTime;
+    public float musicEndTime;
 
     public bool startPlaying;
 
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     public float greatHits;
     public float perfectHits;
     public float missedHits;
+    bool startingFade;
 
     public Text normalsText, greatsText, perfectsText, missesText, rankText, finalscoreText;
 
@@ -48,6 +50,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        int width = 1920; // or something else
+        int height= 1080; // or something else
+        bool isFullScreen = false; // should be windowed to run in arbitrary resolution
+        int desiredFPS = 60; // or something else
+        startingFade = false;
+
+        Screen.SetResolution (width , height, isFullScreen, desiredFPS );
+
         instance = this;
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
@@ -57,6 +68,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //add 5 to musicEndTime
+        if(Time.fixedTime > musicEndTime-5 && startingFade == false)
+        {
+            startingFade = true;
+            StartCoroutine(FadeOut(music, 5f));
+        }
         if (Time.fixedTime > musicStartTime && counter == 0)
         {
 
@@ -64,7 +82,7 @@ public class GameManager : MonoBehaviour
             counter++;
         }
 
-        if(Time.fixedTime > music.time + 5 && !resultsScreen.activeInHierarchy)
+        if(Time.fixedTime+3.5 > musicEndTime + 5 && !resultsScreen.activeInHierarchy)
         {
             resultsScreen.SetActive(true);
 
@@ -79,23 +97,23 @@ public class GameManager : MonoBehaviour
             {
                 rankVal = "D";
                 rankText.color = Color.gray;
-                    if (currentScore >= 2000)
+                    if (currentScore >= 5000)
                 {
                     rankVal = "C";
                     rankText.color = Color.yellow;
-                    if (currentScore >= 3000)
+                    if (currentScore >= 8500)
                     {
                         rankVal = "B";
                         rankText.color = Color.blue;
-                        if(currentScore >= 4000)
+                        if(currentScore >= 10000)
                         {
                             rankVal = "A";
                             rankText.color = Color.red;
-                            if(currentScore >= 5000)
+                            if(currentScore >= 11000)
                             {
                                 rankVal = "S";
                                 rankText.color = Color.magenta;
-                                if(currentScore >= 6000)
+                                if(currentScore >= 12000)
                                 {
                                     rankVal = "SS";
                                     rankText.color = Color.cyan;
@@ -113,9 +131,9 @@ public class GameManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider1)
     {
-        Debug.Log("Collision Detected");
+
         detected = true;
-        Debug.Log(detected);
+
 
     }
 
@@ -173,5 +191,20 @@ public class GameManager : MonoBehaviour
         multiplierTracker = 0;
         Instantiate(miss, new Vector2(3, -1), Quaternion.identity);
         missedHits++;
+    }
+
+    public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {
+
+        float startVolume = audioSource.volume;
+ 
+        while (audioSource.volume > 0) {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+ 
+
+        audioSource.Stop ();
+        audioSource.volume = startVolume;
     }
 }

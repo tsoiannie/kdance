@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0620a86c3aafa4fcbbb8c1101a8837d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 822754607}
+  music: {fileID: 863758031}
   musicStartTime: 3.5
   startPlaying: 1
   bs: {fileID: 797517886}
@@ -596,7 +596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238653395
 GameObject:
@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357215086556076, guid: 3dbec1e87667bc8488d123ebdd3d045c, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4357215086556076, guid: 3dbec1e87667bc8488d123ebdd3d045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -744,32 +744,32 @@ PrefabInstance:
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMax.r
-      value: 0.28439835
+      value: 0.2705882
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMax.g
-      value: 0.39986247
+      value: 0.39097595
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMax.b
-      value: 0.7830189
+      value: 0.93333334
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMin.r
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMin.g
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
       propertyPath: colorMin.b
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114899210952648334, guid: 3dbec1e87667bc8488d123ebdd3d045c,
         type: 3}
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempo: 300
   start: 1
---- !u!1 &822754606
+--- !u!1 &863758030
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1625,26 +1625,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 822754608}
-  - component: {fileID: 822754607}
+  - component: {fileID: 863758032}
+  - component: {fileID: 863758031}
   m_Layer: 0
-  m_Name: bts suga seesaw triva
+  m_Name: loona kim lip eclipse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &822754607
+--- !u!82 &863758031
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822754606}
+  m_GameObject: {fileID: 863758030}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 329cdf9bb72224df4bf38b93238e6644, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 16b831420b80a4df8b0273c6f03a0c34, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1730,19 +1730,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &822754608
+--- !u!4 &863758032
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822754606}
+  m_GameObject: {fileID: 863758030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875399374
 GameObject:
@@ -2346,7 +2346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19801364, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.18928123
+      value: 0.5690584
       objectReference: {fileID: 0}
     - target: {fileID: 19801364, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
@@ -2366,11 +2366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19801364, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0
+      value: 0.54509807
       objectReference: {fileID: 0}
     - target: {fileID: 19801364, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 1
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 19801364, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -2803,15 +2803,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.5540175
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.4554112
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.8113208
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -2824,6 +2824,18 @@ PrefabInstance:
     - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
       propertyPath: looping
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.638242
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 19801442, guid: 834c99069a124aa439d5795c3579843b, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.94509804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834c99069a124aa439d5795c3579843b, type: 3}
@@ -3233,7 +3245,7 @@ GameObject:
   - component: {fileID: 2118719670}
   - component: {fileID: 2118719669}
   m_Layer: 0
-  m_Name: seesaw
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3276,7 +3288,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0f92c74df656549608eeaeba5d36b8fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6930a2039d1d8469fafe73998944e643, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3299,7 +3311,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125296780
 GameObject:
