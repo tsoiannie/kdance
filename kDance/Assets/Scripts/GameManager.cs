@@ -93,27 +93,27 @@ public class GameManager : MonoBehaviour
 
             string rankVal = "F";
 
-            if (currentScore >= 1000)
+            if (currentScore >= 7000)
             {
                 rankVal = "D";
                 rankText.color = Color.gray;
-                    if (currentScore >= 5000)
+                    if (currentScore >= 10000)
                 {
                     rankVal = "C";
                     rankText.color = Color.yellow;
-                    if (currentScore >= 8500)
+                    if (currentScore >= 13500)
                     {
                         rankVal = "B";
                         rankText.color = Color.blue;
-                        if(currentScore >= 10000)
+                        if(currentScore >= 15000)
                         {
                             rankVal = "A";
                             rankText.color = Color.red;
-                            if(currentScore >= 11000)
+                            if(currentScore >= 20000)
                             {
                                 rankVal = "S";
                                 rankText.color = Color.magenta;
-                                if(currentScore >= 12000)
+                                if(currentScore >= 25000)
                                 {
                                     rankVal = "SS";
                                     rankText.color = Color.cyan;

@@ -9,15 +9,12 @@ namespace FancyScrollView.Example03
     {
         [SerializeField] ScrollView scrollView = default;
 
-        private ItemData[] items = new ItemData[6];
+        private ItemData[] items = new ItemData[3];
         private Sprite[] images = new Sprite[6];
 
         public string text1;
         public string text2;
         public string text3;
-        public string text4;
-        public string text5;
-        public string text6;
 
         //pictures
         public Sprite image1;
@@ -35,11 +32,8 @@ namespace FancyScrollView.Example03
                 .ToArray();*/
 
              items[0] = new ItemData(text1);
-             items[1] = new ItemData(text2);
-             items[2] = new ItemData(text3);
-             items[3] = new ItemData(text4);
-             items[4] = new ItemData(text5);
-            items[5] = new ItemData(text6);
+            items[1] = new ItemData(text2);
+            items[2] = new ItemData(text3);
 
             images[0] = image1;
             images[1] = image2;

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class cursorScript : MonoBehaviour
+public class goToSong : MonoBehaviour
 {
-
     public Texture2D activatedCursor;
     private CursorMode cursorMode = CursorMode.Auto;
     public Texture2D defaultCursor;
@@ -12,29 +12,20 @@ public class cursorScript : MonoBehaviour
     private Renderer rending;
     private Color defaultColor = new Color(0.9f, 0.9f, 0.9f);
 
-    public GameObject gameTitle;
-    public GameObject buttons;
-    public GameObject spectrum;
-    public GameObject part2;
-    public GameObject rain;
-    public GameObject part2spectrum;
+    public string whichScene;
 
+    // Start is called before the first frame update
     void Start()
     {
         rending = GetComponent<Renderer>();
         rending.material.SetColor("_Color", defaultColor);
-
     }
 
     private void OnMouseDown()
     {
-        gameTitle.SetActive(false);
-        buttons.SetActive(false);
-        spectrum.SetActive(false);
-        part2.SetActive(true);
-        part2spectrum.SetActive(true);
-        rain.SetActive(false);
         Cursor.SetCursor(defaultCursor, hotSpot, cursorMode);
+        SceneManager.LoadScene(whichScene, LoadSceneMode.Single);
+
     }
 
     void OnMouseEnter()
@@ -52,8 +43,4 @@ public class cursorScript : MonoBehaviour
 
 
     }
-    // Start is called before the first frame update
-
-
-
 }
