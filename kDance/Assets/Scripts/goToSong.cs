@@ -12,6 +12,8 @@ public class goToSong : MonoBehaviour
     private Renderer rending;
     private Color defaultColor = new Color(0.9f, 0.9f, 0.9f);
 
+    public float delayTime = 3.5f;
+
     public string whichScene;
 
     // Start is called before the first frame update
@@ -24,7 +26,7 @@ public class goToSong : MonoBehaviour
     private void OnMouseDown()
     {
         Cursor.SetCursor(defaultCursor, hotSpot, cursorMode);
-        SceneManager.LoadScene(whichScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(whichScene);
 
     }
 

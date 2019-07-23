@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
     public int multiplierTracker;
     public int[] multiplierThreshold;
 
+    //rank numbers
+    public int dRank;
+    public int cRank;
+    public int bRank;
+    public int aRank;
+    public int sRank;
+
     public static GameManager instance;
 
     public GameObject great;
@@ -63,6 +70,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
 
+
     }
 
     // Update is called once per frame
@@ -70,19 +78,19 @@ public class GameManager : MonoBehaviour
     {
 
         //add 5 to musicEndTime
-        if(Time.fixedTime > musicEndTime-5 && startingFade == false)
+        if(Time.timeSinceLevelLoad > musicEndTime-5 && startingFade == false)
         {
             startingFade = true;
             StartCoroutine(FadeOut(music, 5f));
         }
-        if (Time.fixedTime > musicStartTime && counter == 0)
+        if (Time.timeSinceLevelLoad > musicStartTime && counter == 0)
         {
 
             music.Play();
             counter++;
         }
 
-        if(Time.fixedTime+3.5 > musicEndTime + 5 && !resultsScreen.activeInHierarchy)
+        if(Time.timeSinceLevelLoad + 3.5 > musicEndTime + 5 && !resultsScreen.activeInHierarchy)
         {
             resultsScreen.SetActive(true);
 
@@ -92,32 +100,28 @@ public class GameManager : MonoBehaviour
             missesText.text = "" + missedHits;
 
             string rankVal = "F";
+            rankText.color = Color.white;
 
-            if (currentScore >= 7000)
+            if (currentScore >= dRank)
             {
                 rankVal = "D";
                 rankText.color = Color.gray;
-                    if (currentScore >= 10000)
+                    if (currentScore >= cRank)
                 {
                     rankVal = "C";
                     rankText.color = Color.yellow;
-                    if (currentScore >= 13500)
+                    if (currentScore >= bRank)
                     {
                         rankVal = "B";
                         rankText.color = Color.blue;
-                        if(currentScore >= 15000)
+                        if(currentScore >= aRank)
                         {
                             rankVal = "A";
                             rankText.color = Color.red;
-                            if(currentScore >= 20000)
+                            if(currentScore >= sRank)
                             {
                                 rankVal = "S";
                                 rankText.color = Color.magenta;
-                                if(currentScore >= 25000)
-                                {
-                                    rankVal = "SS";
-                                    rankText.color = Color.cyan;
-                                }
                             }
                         }
                     }

@@ -415,6 +415,11 @@ MonoBehaviour:
   currentMultiplier: 0
   multiplierTracker: 0
   multiplierThreshold: 040000000800000010000000
+  dRank: 20000
+  cRank: 22500
+  bRank: 26000
+  aRank: 28000
+  sRank: 30000
   great: {fileID: 3444107149987228860, guid: 5af7c64d426824b319404802aea0f4cc, type: 3}
   perfect: {fileID: 4410538905048217596, guid: 4aeb2af9f85294a0ca4be3dc2305a517, type: 3}
   hit: {fileID: 3664152493878241383, guid: dc51aafb5f14f4eb58c87d25e3ea5fd6, type: 3}

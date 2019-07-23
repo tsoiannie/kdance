@@ -9,9 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/selectSongs.unity
-    guid: 8372ced2a149945e6adc457211af3ef5
-  - enabled: 1
     path: Assets/Scenes/Stages/loona/butterfly.unity
     guid: b053f416974274363b18fab4d5eb2091
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/egoist.unity
+    guid: e122111fb5c4546fba5b81bf82c0a061
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/new.unity
+    guid: 9bfec02c1e3064959bcc2481df50f062
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/heat.unity
+    guid: db7fce0cf59f747b0a3c56dc1323985d
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/love4eva.unity
+    guid: 77981b1e6bbfd4ce3b0f6fed3039907c
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/heart attack.unity
+    guid: 089dee29807c749f7af35f5522023cb3
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/girl front.unity
+    guid: 386eb9fc786234e148367556a5456e69
   m_configObjects: {}
