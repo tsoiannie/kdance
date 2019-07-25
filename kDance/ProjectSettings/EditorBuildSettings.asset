@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stages/loona/girl front.unity
     guid: 386eb9fc786234e148367556a5456e69
+  - enabled: 1
+    path: Assets/Scenes/Stages/loona/hi high.unity
+    guid: 10b5e9d346c6b465182142694ef85b5d
   m_configObjects: {}

@@ -1548,7 +1548,7 @@ GameObject:
   - component: {fileID: 1400072636}
   - component: {fileID: 1400072635}
   m_Layer: 0
-  m_Name: vivid
+  m_Name: hi high
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1605,7 +1605,7 @@ SpriteRenderer:
   m_SortingLayerID: -534864943
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e09b8cd22d764b5c9c5834f830c62c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83c74a05e4aa8403e9ebd5d4832b8bdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1633,7 +1633,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.23, y: 1.24}
+    oldSize: {x: 2.98, y: 1.29}
     newSize: {x: 2.23, y: 1.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   defaultCursor: {fileID: 2800000, guid: 032960dc2d5c843e99f27ff8f7a09c22, type: 3}
   hotSpot: {x: 0, y: 0}
   delayTime: 3.5
-  whichScene: vivid
+  whichScene: hi high
 --- !u!1 &1521574643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1007089192402674, guid: 3dbec1e87667bc8488d123ebdd3d045c,
